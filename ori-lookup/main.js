@@ -100,7 +100,6 @@
   // standalone (local preview), JFCustomWidget is undefined — we still want the UI to work.
   if (typeof JFCustomWidget !== "undefined") {
     JFCustomWidget.subscribe("ready", function () {
-      // Resize iframe to fit content. Re-measured after each major UI change.
       requestResize();
     });
 
@@ -114,6 +113,67 @@
   } else {
     console.log("[MFD ORI] Running standalone (no JFCustomWidget). UI fully functional, no submit wiring.");
   }
+
+  // -------- Auto-fill from URL parameters (set by JotForm placeholder substitution) --------
+  // The iframe URL is set to:
+  //   .../ori-lookup/?street={UserStreetAddress}&city={UserCity}&state={UserState}&zip={UserZipCode}
+  // JotForm substitutes the {field} placeholders with the live values from the form's
+  // address fields. The widget reads these from window.location.search on load and
+  // auto-runs the ORI lookup — no retyping by the applicant.
+  function autoPopulateFromUrl() {
+    if (!oriData) return; // wait for data load
+    const params = new URLSearchParams(window.location.search);
+    const street = (params.get("street") || "").trim();
+    const city = (params.get("city") || "").trim();
+    const zip = (params.get("zip") || "").trim();
+    // state is implicit NJ for our use case — ignore for lookup
+
+    // Skip if all empty (placeholders weren't substituted, or applicant hasn't filled them yet)
+    if (!street && !city && !zip) {
+      console.log("[MFD ORI] No URL params provided — manual entry mode.");
+      return;
+    }
+
+    // Skip if placeholders came through unsubstituted (looks like literal "{UserCity}")
+    const looksLikePlaceholder = (s) => /^\{[A-Za-z]+\}$/.test(s);
+    if (looksLikePlaceholder(street) || looksLikePlaceholder(city) || looksLikePlaceholder(zip)) {
+      console.log("[MFD ORI] URL params look like unsubstituted placeholders — manual entry mode.");
+      return;
+    }
+
+    // Pre-fill the inputs (visible to applicant as confirmation that we have their address)
+    if (street) els.street.value = street;
+    if (city) els.city.value = city;
+    if (zip) els.zip.value = zip;
+    updateFindButton();
+
+    // Auto-run lookup. Prefer ZIP-based disambiguation (instant, deterministic) before geocoding.
+    if (zip && zip.length === 5) {
+      onZipChanged();
+      // ZIP lookup may resolve immediately for single-muni ZIPs.
+      // For multi-muni ZIPs, the warning UI is shown and applicant picks.
+    }
+
+    // If ZIP is single-muni and we have a street address too, also run the geocoder for
+    // additional confidence (this confirms the muni Census says you're in matches the
+    // ZIP-derived muni). Skip if the ZIP-warn UI is visible (multi-muni case — let user pick).
+    if (street && zip) {
+      // Small delay so onZipChanged() can render its UI first
+      setTimeout(() => {
+        if (!els.findBtn.disabled) {
+          findByAddress();
+        }
+      }, 100);
+    }
+  }
+
+  // Hook into the data-load callback so autoPopulate runs once oriData is ready
+  // (the existing fetch chain calls attachListeners + renderManualList — append our auto-fill)
+  const _origAttachListeners = attachListeners;
+  attachListeners = function () {
+    _origAttachListeners.apply(this, arguments);
+    autoPopulateFromUrl();
+  };
 
   function requestResize() {
     if (typeof JFCustomWidget !== "undefined") {
