@@ -184,7 +184,22 @@
   }
 
   function formatSubmittedValue() {
-    if (!selectedEntry) return "";
+    // Always include the applicant's address (so JotForm captures it for SP182, FARS filing, etc.)
+    // even if they haven't picked an ORI yet — that way the field is never "empty" and the
+    // required check passes. The validator reads this value back and parses both halves.
+    const street = (els.street.value || "").trim();
+    const city = (els.city.value || "").trim();
+    const zip = (els.zip.value || "").trim();
+    const addrLine = `${street}, ${city}, NJ ${zip}`.trim();
+
+    if (!selectedEntry) {
+      // No ORI picked yet — submit address + a marker so Tamer sees the gap in the inbox
+      if (street || city || zip) {
+        return `ADDR: ${addrLine} | ORI: ⚠ NOT VERIFIED — applicant did not complete the police-department lookup`;
+      }
+      return "⚠ INCOMPLETE — applicant skipped the address + police-department widget entirely";
+    }
+
     const e = selectedEntry;
     const conf = selectedConfidence || "unknown";
     const base = `ORI: ${e.ori} — ${e.display_name || e.municipality} PD (${e.county} County)`;
@@ -196,7 +211,7 @@
       conf === "verified-zip-disambiguation" ||
       conf === "fid-card-direct"
     ) {
-      return `${base} [${conf}]`;
+      return `ADDR: ${addrLine} | ${base} [${conf}]`;
     }
 
     // Unverified-confirmed: applicant clicked through the warning. Make this LOUD in the inbox
@@ -208,21 +223,31 @@
         ? ` Email ${njspContacts.map((c) => c.email).join(" or ")} to confirm.`
         : " Call the PD records bureau to confirm.";
       const likely = warn?.likely_route ? ` Likely actual: ${warn.likely_route}.` : "";
-      return `⚠️ NEEDS VERIFY BEFORE FILING — ${base}.${likely}${contactLine} [${conf}]`;
+      return `ADDR: ${addrLine} | ⚠️ NEEDS VERIFY BEFORE FILING — ${base}.${likely}${contactLine} [${conf}]`;
     }
 
     // Manual/disambiguation paths — flag for review but less urgently
     if (conf === "manual-after-census-fail" || conf === "manual-disambiguation" || conf === "manual-pick") {
-      return `⚠ REVIEW — ${base} [${conf}]`;
+      return `ADDR: ${addrLine} | ⚠ REVIEW — ${base} [${conf}]`;
     }
 
-    return `${base} [${conf}]`;
+    return `ADDR: ${addrLine} | ${base} [${conf}]`;
   }
 
   // -------- Listeners --------
+  let autoRunTimer = null;
+  const AUTO_RUN_DEBOUNCE_MS = 700;
+
   function attachListeners() {
     [els.street, els.city, els.zip].forEach((el) => {
-      el.addEventListener("input", updateFindButton);
+      el.addEventListener("input", () => {
+        updateFindButton();
+        scheduleAutoRun();
+      });
+      el.addEventListener("blur", () => {
+        if (autoRunTimer) clearTimeout(autoRunTimer);
+        triggerAutoRun();
+      });
     });
     els.zip.addEventListener("input", onZipChanged);
     els.findBtn.addEventListener("click", findByAddress);
@@ -233,6 +258,19 @@
   function updateFindButton() {
     const ready = els.street.value.trim() && els.city.value.trim() && els.zip.value.trim().length === 5;
     els.findBtn.disabled = !ready;
+  }
+
+  function scheduleAutoRun() {
+    if (autoRunTimer) clearTimeout(autoRunTimer);
+    autoRunTimer = setTimeout(triggerAutoRun, AUTO_RUN_DEBOUNCE_MS);
+  }
+
+  function triggerAutoRun() {
+    autoRunTimer = null;
+    // Auto-run only when all 3 fields are populated. Otherwise wait.
+    if (!els.findBtn.disabled) {
+      findByAddress();
+    }
   }
 
   // PROACTIVE multi-muni ZIP warning — fires the moment user types a 5-digit ZIP.
@@ -460,7 +498,9 @@
 
   function showMatch(entry, contextMsg) {
     // showMatch is now ONLY called for verified Census Geocoder hits, never for fuzzy fallbacks.
-    // Fuzzy fallbacks go through showUnverifiedFallback() which forces explicit user confirmation.
+    // For non-special-case verified matches, AUTO-ACCEPT (no click required) — Tamer wants
+    // smart and easy. For special-case munis (Newark NJNPD0000 etc.), require explicit click
+    // because the warning matters.
     const cls = entry.has_special_case ? "warning" : "match";
     const headerIcon = entry.has_special_case ? "⚠️" : "✓";
     const headerText = entry.has_special_case
@@ -483,14 +523,20 @@
       html += `<div style="margin-top:6px;color:#742a2a;font-size:12px">⚠ Never use the legacy ORI: <code>${escapeHtml(entry.historical_ori)}</code></div>`;
     }
 
-    html += `<button type="button" class="accept-btn" onclick="window.__mfd_accept()">Use this ORI</button>`;
+    if (entry.has_special_case) {
+      // Require explicit click so user reads the warning
+      html += `<button type="button" class="accept-btn" onclick="window.__mfd_accept()">I understand — use this ORI</button>`;
+      window.__mfd_accept = () => acceptEntry(entry, "verified-census");
+    }
 
     els.result.hidden = false;
     els.result.className = `result ${cls}`;
     els.result.innerHTML = html;
 
-    window.__mfd_pending = entry;
-    window.__mfd_accept = () => acceptEntry(entry, "verified-census");
+    // Auto-accept the clean (non-special-case) matches so applicant doesn't have to click
+    if (!entry.has_special_case) {
+      acceptEntry(entry, "verified-census", { keepResultVisible: true });
+    }
     requestResize();
   }
 
@@ -573,7 +619,7 @@
   }
 
   // -------- Selection --------
-  function acceptEntry(entry, confidence) {
+  function acceptEntry(entry, confidence, opts = {}) {
     // STAGE 1: Hard-block check — refuse known-dead ORIs that cause $76-$228 cancellations.
     const block = hardBlocks?.hard_block?.[entry.ori];
     if (block) {
@@ -593,7 +639,12 @@
     selectedConfidence = confidence || "unknown";
     els.selected.hidden = false;
     els.selectedValue.textContent = formatSubmittedValue();
-    els.result.hidden = true;
+    // For auto-accept (verified-census), KEEP the result panel showing so the applicant sees
+    // the confirmation. For manual picks, hide the result panel since the selected panel
+    // makes it redundant.
+    if (!opts.keepResultVisible) {
+      els.result.hidden = true;
+    }
     requestResize();
   }
 
