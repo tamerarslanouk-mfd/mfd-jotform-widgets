@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "fetched_at": "2026-04-26T08:58:04.439Z",
+    "source_url": "https://njsp.njoag.gov/firearms-investigation-licensing-bureau/emails-ori-list/",
+    "scraper": "tools/scrape_njsp_ori.js",
+    "total_entries": 18,
+    "note": "NJSP only publishes their own barracks list (~18 stations across Troops A/B/C). For municipal ORIs, use tools/data/nj_fbi_agencies_snapshot.json (FBI Crime Data Explorer)."
+  },
+  "entries": [
+    {
+      "station": "Bellmawr Station",
+      "email": "NJSPBellmawrFirearms@njsp.gov",
+      "ori": "NJNSP2600",
+      "troop": "?"
+    },
+    {
+      "station": "Bridgeton Station",
+      "email": "NJSPBridgetonFirearms@njsp.gov",
+      "ori": "NJNSP2200",
+      "troop": "A"
+    },
+    {
+      "station": "Buena Vista Sub Station",
+      "email": "NJSPBuenaFirearms@njsp.gov",
+      "ori": "NJNSP2000",
+      "troop": "A"
+    },
+    {
+      "station": "Port Norris Station",
+      "email": "NJSPPortNorrisFirearms@njsp.gov",
+      "ori": "NJNSP2800",
+      "troop": "A"
+    },
+    {
+      "station": "Woodbine Station",
+      "email": "NJSPWoodbineFirearms@njsp.gov",
+      "ori": "NJNSP3500",
+      "troop": "A"
+    },
+    {
+      "station": "Woodstown Station",
+      "email": "NJSPWoodstownFirearms@njsp.gov",
+      "ori": "NJNSP3200",
+      "troop": "A"
+    },
+    {
+      "station": "Hope Station",
+      "email": "NJSPHopeFirearms@njsp.gov",
+      "ori": "NJNSP4000",
+      "troop": "B"
+    },
+    {
+      "station": "Netcong Station",
+      "email": "NJSPNetcongFirearms@njsp.gov",
+      "ori": "NJNSP4600",
+      "troop": "B"
+    },
+    {
+      "station": "Perryville Station",
+      "email": "NJSPPerryvilleFirearms@njsp.gov",
+      "ori": "NJNSP8800",
+      "troop": "B"
+    },
+    {
+      "station": "Somerville Station",
+      "email": "NJSPSomervilleFirearms@njsp.gov",
+      "ori": "NJNSP5100",
+      "troop": "B"
+    },
+    {
+      "station": "Sussex Station",
+      "email": "NJSPSussexFirearms@njsp.gov",
+      "ori": "NJNSP5200",
+      "troop": "B"
+    },
+    {
+      "station": "Totowa Sub-Station",
+      "email": "NJSPTotowaFirearms@njsp.gov",
+      "ori": "NJNSP0800",
+      "troop": "B"
+    },
+    {
+      "station": "Washington Station",
+      "email": "NJSPWashingtonFirearms@njsp.gov",
+      "ori": "NJNSP5300",
+      "troop": "B"
+    },
+    {
+      "station": "Bordentown Station",
+      "email": "NJSPBordentownFirearms@njsp.gov",
+      "ori": "NJNSP6000",
+      "troop": "C"
+    },
+    {
+      "station": "Hamilton Sub-Station",
+      "email": "NJSPHamiltonFirearms@njsp.gov",
+      "ori": "NJNSP6400",
+      "troop": "C"
+    },
+    {
+      "station": "Kingwood Station",
+      "email": "NJSPKingwoodFirearms@njsp.gov",
+      "ori": "NJNSP4200",
+      "troop": "C"
+    },
+    {
+      "station": "Red Lion Station",
+      "email": "NJSPRedLionFirearms@njsp.gov",
+      "ori": "NJNSP2900",
+      "troop": "C"
+    },
+    {
+      "station": "Tuckerton Station",
+      "email": "NJSPTuckertonFirearms@njsp.gov",
+      "ori": "NJNSP3000",
+      "troop": "C"
+    }
+  ]
+}

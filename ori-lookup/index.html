@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFD ORI Lookup</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- JotForm Custom Widget API (loads JFCustomWidget global) -->
+  <script src="https://cdn.jotfor.ms/static/widget-icon-generator/widget-icon-generator.min.js"></script>
+  <script src="https://cdn.jotfor.ms/widget/0.4.4/jotform.widget.client.min.js"></script>
+</head>
+<body>
+  <div class="mfd-widget" id="mfd-widget">
+    <div class="header">
+      <h2>Find Your Police Department</h2>
+      <p class="hint">Enter your home address — we'll find the police department that handles your firearms application. <strong>This must be the legal municipality, not your postal city</strong> (they're sometimes different).</p>
+    </div>
+
+    <div class="address-inputs">
+      <label>
+        Street Address
+        <input type="text" id="street" placeholder="123 Main St" autocomplete="off">
+      </label>
+      <div class="row">
+        <label class="grow">
+          City
+          <input type="text" id="city" placeholder="Paramus" autocomplete="off">
+        </label>
+        <label class="zip">
+          ZIP
+          <input type="text" id="zip" placeholder="07652" maxlength="5" inputmode="numeric" autocomplete="off">
+        </label>
+      </div>
+      <button type="button" id="find-btn" disabled>Find My Police Department</button>
+    </div>
+
+    <div class="result" id="result" hidden>
+      <!-- Populated by JS -->
+    </div>
+
+    <details class="manual-override">
+      <summary>Or pick manually</summary>
+      <div class="manual-inner">
+        <input type="search" id="muni-search" placeholder="Type your municipality name…" autocomplete="off">
+        <div class="muni-list" id="muni-list" role="listbox"></div>
+      </div>
+    </details>
+
+    <div class="selected" id="selected" hidden>
+      <div class="selected-label">Selected:</div>
+      <div class="selected-value" id="selected-value"></div>
+      <button type="button" id="clear-btn" class="link">Clear</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

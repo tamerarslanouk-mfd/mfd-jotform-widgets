@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFD Email Typo Check</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- JotForm Custom Widget API -->
+  <script src="https://cdn.jotfor.ms/widget/0.4.4/jotform.widget.client.min.js"></script>
+  <!-- Mailcheck — open source typo detector -->
+  <script src="mailcheck.min.js"></script>
+</head>
+<body>
+  <div class="mfd-widget" id="mfd-widget">
+    <div class="header">
+      <h2>Verify Your Email Address</h2>
+      <p class="hint">Re-type your email below. We'll catch common typos like <code>gmial.com</code> instead of <code>gmail.com</code>. <strong>Your application's status updates from the State Police are sent to this address — typos delay your application by weeks.</strong></p>
+    </div>
+
+    <label>
+      Email
+      <input type="email" id="email" placeholder="you@example.com" autocomplete="email" autocapitalize="off" spellcheck="false">
+    </label>
+
+    <div class="status" id="status" hidden></div>
+
+    <div class="hint-bottom">If you didn't make any typos, this widget will quietly accept what you typed and move on.</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
