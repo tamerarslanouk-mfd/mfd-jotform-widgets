@@ -7,8 +7,8 @@
     "total_zips": 598,
     "multi_muni_zips": 328,
     "max_munis_per_zip": 9,
-    "matched_to_ori_table": 1262,
-    "no_ori_match": 33,
+    "matched_to_ori_table": 1286,
+    "no_ori_match": 9,
     "purpose": "When applicant types a ZIP, widget should look up by_zip[zip]. If 2+ entries, force explicit pick BEFORE any geocoding attempt — this catches the postal-vs-legal-municipality trap that costs $76-$228 per misroute."
   },
   "by_zip": {
@@ -40,9 +40,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07003": [
@@ -497,9 +498,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07031": [
@@ -1182,22 +1184,21 @@
     ],
     "07079": [
       {
-        "census_muni_name": "South Orange Village township",
-        "county": "Essex",
-        "county_fips": "013",
-        "cousub_geoid": "3401369274",
-        "matched_in_ori_table": true,
-        "municipality": "South Orange",
-        "ori": "NJ0071900",
-        "has_special_case": false
-      },
-      {
         "census_muni_name": "City of Orange township",
         "county": "Essex",
         "county_fips": "013",
         "cousub_geoid": "3401313045",
         "matched_in_ori_table": false,
         "municipality": "City of Orange township",
+        "ori": null
+      },
+      {
+        "census_muni_name": "South Orange Village township",
+        "county": "Essex",
+        "county_fips": "013",
+        "cousub_geoid": "3401369274",
+        "matched_in_ori_table": false,
+        "municipality": "South Orange Village township",
         "ori": null
       }
     ],
@@ -1297,18 +1298,20 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       },
       {
         "census_muni_name": "Union City city",
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401774630",
-        "matched_in_ori_table": false,
-        "municipality": "Union City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Union City",
+        "ori": "NJ0091000",
+        "has_special_case": false
       }
     ],
     "07088": [
@@ -1727,9 +1730,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07304": [
@@ -1738,9 +1742,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07305": [
@@ -1749,9 +1754,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07306": [
@@ -1760,12 +1766,23 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07307": [
+      {
+        "census_muni_name": "Jersey City city",
+        "county": "Hudson",
+        "county_fips": "017",
+        "cousub_geoid": "3401736000",
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
+      },
       {
         "census_muni_name": "Secaucus town",
         "county": "Hudson",
@@ -1775,15 +1792,6 @@
         "municipality": "Secaucus",
         "ori": "NJ0090900",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Jersey City city",
-        "county": "Hudson",
-        "county_fips": "017",
-        "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
       }
     ],
     "07310": [
@@ -1792,9 +1800,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07311": [
@@ -1803,9 +1812,10 @@
         "county": "Hudson",
         "county_fips": "017",
         "cousub_geoid": "3401736000",
-        "matched_in_ori_table": false,
-        "municipality": "Jersey City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Jersey City",
+        "ori": "NJ0090600",
+        "has_special_case": false
       }
     ],
     "07401": [
@@ -4142,20 +4152,20 @@
     ],
     "07753": [
       {
-        "census_muni_name": "Neptune township",
-        "county": "Monmouth",
-        "county_fips": "025",
-        "cousub_geoid": "3402549890",
-        "matched_in_ori_table": true,
-        "municipality": "Neptune Township",
-        "ori": "NJ0133400",
-        "has_special_case": false
-      },
-      {
         "census_muni_name": "Neptune City borough",
         "county": "Monmouth",
         "county_fips": "025",
         "cousub_geoid": "3402549920",
+        "matched_in_ori_table": true,
+        "municipality": "Neptune City",
+        "ori": "NJ0133500",
+        "has_special_case": false
+      },
+      {
+        "census_muni_name": "Neptune township",
+        "county": "Monmouth",
+        "county_fips": "025",
+        "cousub_geoid": "3402549890",
         "matched_in_ori_table": true,
         "municipality": "Neptune Township",
         "ori": "NJ0133400",
@@ -7209,6 +7219,16 @@
         "has_special_case": false
       },
       {
+        "census_muni_name": "Gloucester City city",
+        "county": "Camden",
+        "county_fips": "007",
+        "cousub_geoid": "3400726820",
+        "matched_in_ori_table": true,
+        "municipality": "Gloucester City",
+        "ori": "NJ0041400",
+        "has_special_case": false
+      },
+      {
         "census_muni_name": "Haddon township",
         "county": "Camden",
         "county_fips": "007",
@@ -7217,15 +7237,6 @@
         "municipality": "Haddon Township",
         "ori": "NJ0041600",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Gloucester City city",
-        "county": "Camden",
-        "county_fips": "007",
-        "cousub_geoid": "3400726820",
-        "matched_in_ori_table": false,
-        "municipality": "Gloucester City city",
-        "ori": null
       }
     ],
     "08031": [
@@ -7778,6 +7789,16 @@
         "has_special_case": false
       },
       {
+        "census_muni_name": "Gloucester City city",
+        "county": "Camden",
+        "county_fips": "007",
+        "cousub_geoid": "3400726820",
+        "matched_in_ori_table": true,
+        "municipality": "Gloucester City",
+        "ori": "NJ0041400",
+        "has_special_case": false
+      },
+      {
         "census_muni_name": "Haddon township",
         "county": "Camden",
         "county_fips": "007",
@@ -7796,15 +7817,6 @@
         "municipality": "Mount Ephraim",
         "ori": "NJ0042500",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Gloucester City city",
-        "county": "Camden",
-        "county_fips": "007",
-        "cousub_geoid": "3400726820",
-        "matched_in_ori_table": false,
-        "municipality": "Gloucester City city",
-        "ori": null
       }
     ],
     "08060": [
@@ -9245,6 +9257,16 @@
     ],
     "08203": [
       {
+        "census_muni_name": "Atlantic City city",
+        "county": "Atlantic",
+        "county_fips": "001",
+        "cousub_geoid": "3400102080",
+        "matched_in_ori_table": true,
+        "municipality": "Atlantic City",
+        "ori": "NJ0010200",
+        "has_special_case": false
+      },
+      {
         "census_muni_name": "Brigantine city",
         "county": "Atlantic",
         "county_fips": "001",
@@ -9253,15 +9275,6 @@
         "municipality": "Brigantine",
         "ori": "NJ0010300",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Atlantic City city",
-        "county": "Atlantic",
-        "county_fips": "001",
-        "cousub_geoid": "3400102080",
-        "matched_in_ori_table": false,
-        "municipality": "Atlantic City city",
-        "ori": null
       }
     ],
     "08204": [
@@ -9374,6 +9387,16 @@
         "has_special_case": false
       },
       {
+        "census_muni_name": "Egg Harbor City city",
+        "county": "Atlantic",
+        "county_fips": "001",
+        "cousub_geoid": "3400120350",
+        "matched_in_ori_table": true,
+        "municipality": "Egg Harbor City",
+        "ori": "NJ0010700",
+        "has_special_case": false
+      },
+      {
         "census_muni_name": "Galloway township",
         "county": "Atlantic",
         "county_fips": "001",
@@ -9402,15 +9425,6 @@
         "municipality": "Washington Township",
         "ori": "NJNSP3000",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Egg Harbor City city",
-        "county": "Atlantic",
-        "county_fips": "001",
-        "cousub_geoid": "3400120350",
-        "matched_in_ori_table": false,
-        "municipality": "Egg Harbor City city",
-        "ori": null
       }
     ],
     "08217": [
@@ -9499,9 +9513,10 @@
         "county": "Cape May",
         "county_fips": "009",
         "cousub_geoid": "3400954360",
-        "matched_in_ori_table": false,
-        "municipality": "Ocean City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Ocean City",
+        "ori": "NJ0050800",
+        "has_special_case": false
       }
     ],
     "08230": [
@@ -9612,9 +9627,10 @@
         "county": "Cape May",
         "county_fips": "009",
         "cousub_geoid": "3400966390",
-        "matched_in_ori_table": false,
-        "municipality": "Sea Isle City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Sea Isle City",
+        "ori": "NJ0050900",
+        "has_special_case": false
       }
     ],
     "08244": [
@@ -9783,6 +9799,16 @@
     ],
     "08270": [
       {
+        "census_muni_name": "Corbin City city",
+        "county": "Atlantic",
+        "county_fips": "001",
+        "cousub_geoid": "3400115160",
+        "matched_in_ori_table": true,
+        "municipality": "Corbin City",
+        "ori": "NJNSP3500",
+        "has_special_case": true
+      },
+      {
         "census_muni_name": "Dennis township",
         "county": "Cape May",
         "county_fips": "009",
@@ -9831,15 +9857,6 @@
         "municipality": "Woodbine Borough",
         "ori": "NJ0051600",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Corbin City city",
-        "county": "Atlantic",
-        "county_fips": "001",
-        "cousub_geoid": "3400115160",
-        "matched_in_ori_table": false,
-        "municipality": "Corbin City city",
-        "ori": null
       }
     ],
     "08302": [
@@ -10240,6 +10257,16 @@
         "has_special_case": true
       },
       {
+        "census_muni_name": "Corbin City city",
+        "county": "Atlantic",
+        "county_fips": "001",
+        "cousub_geoid": "3400115160",
+        "matched_in_ori_table": true,
+        "municipality": "Corbin City",
+        "ori": "NJNSP3500",
+        "has_special_case": true
+      },
+      {
         "census_muni_name": "Estell Manor city",
         "county": "Atlantic",
         "county_fips": "001",
@@ -10278,15 +10305,6 @@
         "municipality": "Weymouth Township",
         "ori": "NJNSP2000",
         "has_special_case": false
-      },
-      {
-        "census_muni_name": "Corbin City city",
-        "county": "Atlantic",
-        "county_fips": "001",
-        "cousub_geoid": "3400115160",
-        "matched_in_ori_table": false,
-        "municipality": "Corbin City city",
-        "ori": null
       }
     ],
     "08332": [
@@ -10653,18 +10671,20 @@
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400102080",
-        "matched_in_ori_table": false,
-        "municipality": "Atlantic City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Atlantic City",
+        "ori": "NJ0010200",
+        "has_special_case": false
       },
       {
         "census_muni_name": "Ventnor City city",
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400175620",
-        "matched_in_ori_table": false,
-        "municipality": "Ventnor City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Ventnor City",
+        "ori": "NJ0012200",
+        "has_special_case": false
       }
     ],
     "08402": [
@@ -10673,9 +10693,10 @@
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400143890",
-        "matched_in_ori_table": false,
-        "municipality": "Margate City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Margate City",
+        "ori": "NJ0011600",
+        "has_special_case": false
       }
     ],
     "08403": [
@@ -10706,27 +10727,30 @@
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400102080",
-        "matched_in_ori_table": false,
-        "municipality": "Atlantic City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Atlantic City",
+        "ori": "NJ0010200",
+        "has_special_case": false
       },
       {
         "census_muni_name": "Margate City city",
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400143890",
-        "matched_in_ori_table": false,
-        "municipality": "Margate City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Margate City",
+        "ori": "NJ0011600",
+        "has_special_case": false
       },
       {
         "census_muni_name": "Ventnor City city",
         "county": "Atlantic",
         "county_fips": "001",
         "cousub_geoid": "3400175620",
-        "matched_in_ori_table": false,
-        "municipality": "Ventnor City city",
-        "ori": null
+        "matched_in_ori_table": true,
+        "municipality": "Ventnor City",
+        "ori": "NJ0012200",
+        "has_special_case": false
       }
     ],
     "08501": [
