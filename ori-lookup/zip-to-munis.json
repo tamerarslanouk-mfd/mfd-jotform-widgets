@@ -87,8 +87,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402706640",
         "matched_in_ori_table": true,
-        "municipality": "Boonton Town",
-        "ori": "NJ0140100",
+        "municipality": "Boonton Township",
+        "ori": "NJ0140200",
         "has_special_case": false
       },
       {
@@ -127,8 +127,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       }
     ],
@@ -2127,8 +2127,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       },
       {
@@ -3669,8 +3669,8 @@
         "county_fips": "025",
         "cousub_geoid": "3402567365",
         "matched_in_ori_table": true,
-        "municipality": "Shrewsbury Borough",
-        "ori": "NJ0134500",
+        "municipality": "Shrewsbury Township",
+        "ori": "NJNSP6400",
         "has_special_case": false
       },
       {
@@ -3795,8 +3795,8 @@
         "county_fips": "025",
         "cousub_geoid": "3402525230",
         "matched_in_ori_table": true,
-        "municipality": "Freehold Borough",
-        "ori": "NJ0131500",
+        "municipality": "Freehold Township",
+        "ori": "NJ0131600",
         "has_special_case": false
       },
       {
@@ -4363,8 +4363,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       },
       {
@@ -4439,8 +4439,8 @@
         "county_fips": "037",
         "cousub_geoid": "3403701360",
         "matched_in_ori_table": true,
-        "municipality": "Andover Borough",
-        "ori": "NJ0190100",
+        "municipality": "Andover Township",
+        "ori": "NJ0190200",
         "has_special_case": false
       },
       {
@@ -4703,8 +4703,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       },
       {
@@ -4735,8 +4735,8 @@
         "county_fips": "041",
         "cousub_geoid": "3404177300",
         "matched_in_ori_table": true,
-        "municipality": "Washington Borough",
-        "ori": "NJ0212100",
+        "municipality": "Washington Township",
+        "ori": "NJ0212200",
         "has_special_case": false
       }
     ],
@@ -4811,8 +4811,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402706640",
         "matched_in_ori_table": true,
-        "municipality": "Boonton Town",
-        "ori": "NJ0140100",
+        "municipality": "Boonton Township",
+        "ori": "NJ0140200",
         "has_special_case": false
       },
       {
@@ -4841,8 +4841,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       }
     ],
@@ -4853,8 +4853,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712610",
         "matched_in_ori_table": true,
-        "municipality": "Chester Borough",
-        "ori": "NJ0140600",
+        "municipality": "Chester Township",
+        "ori": "NJ0140700",
         "has_special_case": false
       },
       {
@@ -4999,8 +4999,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       }
     ],
@@ -5059,8 +5059,8 @@
         "county_fips": "037",
         "cousub_geoid": "3403701360",
         "matched_in_ori_table": true,
-        "municipality": "Andover Borough",
-        "ori": "NJ0190100",
+        "municipality": "Andover Township",
+        "ori": "NJ0190200",
         "has_special_case": false
       },
       {
@@ -5265,8 +5265,8 @@
         "county_fips": "037",
         "cousub_geoid": "3403701360",
         "matched_in_ori_table": true,
-        "municipality": "Andover Borough",
-        "ori": "NJ0190100",
+        "municipality": "Andover Township",
+        "ori": "NJ0190200",
         "has_special_case": false
       },
       {
@@ -5377,8 +5377,8 @@
         "county_fips": "041",
         "cousub_geoid": "3404177300",
         "matched_in_ori_table": true,
-        "municipality": "Washington Borough",
-        "ori": "NJ0212100",
+        "municipality": "Washington Township",
+        "ori": "NJ0212200",
         "has_special_case": false
       },
       {
@@ -5399,8 +5399,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       },
       {
@@ -5451,8 +5451,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       }
     ],
@@ -5463,8 +5463,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712610",
         "matched_in_ori_table": true,
-        "municipality": "Chester Borough",
-        "ori": "NJ0140600",
+        "municipality": "Chester Township",
+        "ori": "NJ0140700",
         "has_special_case": false
       },
       {
@@ -5483,8 +5483,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       },
       {
@@ -5669,8 +5669,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       },
       {
@@ -5699,8 +5699,8 @@
         "county_fips": "041",
         "cousub_geoid": "3404177300",
         "matched_in_ori_table": true,
-        "municipality": "Washington Borough",
-        "ori": "NJ0212100",
+        "municipality": "Washington Township",
+        "ori": "NJ0212200",
         "has_special_case": false
       },
       {
@@ -5731,8 +5731,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402764080",
         "matched_in_ori_table": true,
-        "municipality": "Rockaway Borough",
-        "ori": "NJ0143400",
+        "municipality": "Rockaway Township",
+        "ori": "NJ0143500",
         "has_special_case": false
       },
       {
@@ -5893,8 +5893,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       }
     ],
@@ -5937,8 +5937,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712130",
         "matched_in_ori_table": true,
-        "municipality": "Chatham Borough",
-        "ori": "NJ0140400",
+        "municipality": "Chatham Township",
+        "ori": "NJ0140500",
         "has_special_case": false
       }
     ],
@@ -5959,8 +5959,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712610",
         "matched_in_ori_table": true,
-        "municipality": "Chester Borough",
-        "ori": "NJ0140600",
+        "municipality": "Chester Township",
+        "ori": "NJ0140700",
         "has_special_case": false
       },
       {
@@ -6021,8 +6021,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712610",
         "matched_in_ori_table": true,
-        "municipality": "Chester Borough",
-        "ori": "NJ0140600",
+        "municipality": "Chester Township",
+        "ori": "NJ0140700",
         "has_special_case": false
       },
       {
@@ -6041,8 +6041,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       },
       {
@@ -6096,8 +6096,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712610",
         "matched_in_ori_table": true,
-        "municipality": "Chester Borough",
-        "ori": "NJ0140600",
+        "municipality": "Chester Township",
+        "ori": "NJ0140700",
         "has_special_case": false
       },
       {
@@ -6117,8 +6117,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712130",
         "matched_in_ori_table": true,
-        "municipality": "Chatham Borough",
-        "ori": "NJ0140400",
+        "municipality": "Chatham Township",
+        "ori": "NJ0140500",
         "has_special_case": false
       },
       {
@@ -6163,8 +6163,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712130",
         "matched_in_ori_table": true,
-        "municipality": "Chatham Borough",
-        "ori": "NJ0140400",
+        "municipality": "Chatham Township",
+        "ori": "NJ0140500",
         "has_special_case": false
       },
       {
@@ -6215,8 +6215,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       },
       {
@@ -6301,8 +6301,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402712130",
         "matched_in_ori_table": true,
-        "municipality": "Chatham Borough",
-        "ori": "NJ0140400",
+        "municipality": "Chatham Township",
+        "ori": "NJ0140500",
         "has_special_case": false
       },
       {
@@ -6341,8 +6341,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       },
       {
@@ -6395,8 +6395,8 @@
         "county_fips": "027",
         "cousub_geoid": "3402745360",
         "matched_in_ori_table": true,
-        "municipality": "Mendham Borough",
-        "ori": "NJ0141800",
+        "municipality": "Mendham Township",
+        "ori": "NJ0141900",
         "has_special_case": false
       }
     ],
@@ -6743,8 +6743,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400705470",
         "matched_in_ori_table": true,
-        "municipality": "Berlin Borough",
-        "ori": "NJ0040500",
+        "municipality": "Berlin Township",
+        "ori": "NJ0040600",
         "has_special_case": false
       },
       {
@@ -6795,8 +6795,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400508950",
         "matched_in_ori_table": true,
-        "municipality": "Burlington City",
-        "ori": "NJ0030500",
+        "municipality": "Burlington Township",
+        "ori": "NJ0030600",
         "has_special_case": false
       },
       {
@@ -6827,8 +6827,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       }
     ],
@@ -6839,8 +6839,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -6883,8 +6883,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       },
       {
@@ -6915,8 +6915,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400508950",
         "matched_in_ori_table": true,
-        "municipality": "Burlington City",
-        "ori": "NJ0030500",
+        "municipality": "Burlington Township",
+        "ori": "NJ0030600",
         "has_special_case": false
       },
       {
@@ -7031,8 +7031,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -7192,8 +7192,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -7466,8 +7466,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       },
       {
@@ -7566,8 +7566,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -7856,8 +7856,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       },
       {
@@ -7984,8 +7984,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       }
     ],
@@ -8082,8 +8082,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       },
       {
@@ -8416,8 +8416,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -8448,8 +8448,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400726760",
         "matched_in_ori_table": true,
-        "municipality": "Gloucester City",
-        "ori": "NJ0041400",
+        "municipality": "Gloucester Township",
+        "ori": "NJ0041500",
         "has_special_case": false
       },
       {
@@ -8714,8 +8714,8 @@
         "county_fips": "007",
         "cousub_geoid": "3400705470",
         "matched_in_ori_table": true,
-        "municipality": "Berlin Borough",
-        "ori": "NJ0040500",
+        "municipality": "Berlin Township",
+        "ori": "NJ0040600",
         "has_special_case": false
       }
     ],
@@ -9446,8 +9446,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       },
       {
@@ -9492,8 +9492,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       },
       {
@@ -9548,8 +9548,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       },
       {
@@ -9570,8 +9570,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       }
     ],
@@ -9640,8 +9640,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       },
       {
@@ -10706,8 +10706,8 @@
         "county_fips": "001",
         "cousub_geoid": "3400120290",
         "matched_in_ori_table": true,
-        "municipality": "Egg Harbor City",
-        "ori": "NJ0010700",
+        "municipality": "Egg Harbor Township",
+        "ori": "NJ0010800",
         "has_special_case": false
       },
       {
@@ -10824,8 +10824,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400506700",
         "matched_in_ori_table": true,
-        "municipality": "Bordentown City",
-        "ori": "NJ0030300",
+        "municipality": "Bordentown Township",
+        "ori": "NJ0030400",
         "has_special_case": false
       },
       {
@@ -10994,8 +10994,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400506700",
         "matched_in_ori_table": true,
-        "municipality": "Bordentown City",
-        "ori": "NJ0030300",
+        "municipality": "Bordentown Township",
+        "ori": "NJ0030400",
         "has_special_case": false
       },
       {
@@ -11016,8 +11016,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400508950",
         "matched_in_ori_table": true,
-        "municipality": "Burlington City",
-        "ori": "NJ0030500",
+        "municipality": "Burlington Township",
+        "ori": "NJ0030600",
         "has_special_case": false
       },
       {
@@ -11090,8 +11090,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11176,8 +11176,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11240,8 +11240,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11296,8 +11296,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11482,8 +11482,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11566,8 +11566,8 @@
         "county_fips": "021",
         "cousub_geoid": "3402133180",
         "matched_in_ori_table": true,
-        "municipality": "Hopewell Borough",
-        "ori": "NJ0110500",
+        "municipality": "Hopewell Township",
+        "ori": "NJ0110600",
         "has_special_case": false
       },
       {
@@ -11676,8 +11676,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400506700",
         "matched_in_ori_table": true,
-        "municipality": "Bordentown City",
-        "ori": "NJ0030300",
+        "municipality": "Bordentown Township",
+        "ori": "NJ0030400",
         "has_special_case": false
       },
       {
@@ -11764,8 +11764,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400506700",
         "matched_in_ori_table": true,
-        "municipality": "Bordentown City",
-        "ori": "NJ0030300",
+        "municipality": "Bordentown Township",
+        "ori": "NJ0030400",
         "has_special_case": false
       },
       {
@@ -11872,8 +11872,8 @@
         "county_fips": "005",
         "cousub_geoid": "3400557510",
         "matched_in_ori_table": true,
-        "municipality": "Pemberton Borough",
-        "ori": "NJ0032900",
+        "municipality": "Pemberton Township",
+        "ori": "NJ0033000",
         "has_special_case": false
       },
       {
@@ -12592,8 +12592,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401913750",
         "matched_in_ori_table": true,
-        "municipality": "Clinton Town",
-        "ori": "NJ0100500",
+        "municipality": "Clinton Township",
+        "ori": "NJ0100600",
         "has_special_case": false
       },
       {
@@ -12664,8 +12664,8 @@
         "county_fips": "041",
         "cousub_geoid": "3404177300",
         "matched_in_ori_table": true,
-        "municipality": "Washington Borough",
-        "ori": "NJ0212100",
+        "municipality": "Washington Township",
+        "ori": "NJ0212200",
         "has_special_case": false
       }
     ],
@@ -12802,8 +12802,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401913750",
         "matched_in_ori_table": true,
-        "municipality": "Clinton Town",
-        "ori": "NJ0100500",
+        "municipality": "Clinton Township",
+        "ori": "NJ0100600",
         "has_special_case": false
       },
       {
@@ -12822,8 +12822,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       },
       {
@@ -12966,8 +12966,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401913750",
         "matched_in_ori_table": true,
-        "municipality": "Clinton Town",
-        "ori": "NJ0100500",
+        "municipality": "Clinton Township",
+        "ori": "NJ0100600",
         "has_special_case": false
       },
       {
@@ -13134,8 +13134,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       }
     ],
@@ -13186,8 +13186,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401939660",
         "matched_in_ori_table": true,
-        "municipality": "Lebanon Borough",
-        "ori": "NJ0101800",
+        "municipality": "Lebanon Township",
+        "ori": "NJ0101900",
         "has_special_case": false
       },
       {
@@ -13206,8 +13206,8 @@
         "county_fips": "041",
         "cousub_geoid": "3404177300",
         "matched_in_ori_table": true,
-        "municipality": "Washington Borough",
-        "ori": "NJ0212100",
+        "municipality": "Washington Township",
+        "ori": "NJ0212200",
         "has_special_case": false
       }
     ],
@@ -13230,8 +13230,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401913750",
         "matched_in_ori_table": true,
-        "municipality": "Clinton Town",
-        "ori": "NJ0100500",
+        "municipality": "Clinton Township",
+        "ori": "NJ0100600",
         "has_special_case": false
       },
       {
@@ -13338,8 +13338,8 @@
         "county_fips": "019",
         "cousub_geoid": "3401913750",
         "matched_in_ori_table": true,
-        "municipality": "Clinton Town",
-        "ori": "NJ0100500",
+        "municipality": "Clinton Township",
+        "ori": "NJ0100600",
         "has_special_case": false
       },
       {
