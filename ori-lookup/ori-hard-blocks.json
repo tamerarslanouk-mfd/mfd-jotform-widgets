@@ -3,6 +3,7 @@
     "captured": "2026-04-26",
     "source": "Synthesis of NJ_ORI_Master_List.xlsx special-cases sheet + tools/audit_ori_data.py FBI cross-reference + tools/research deep-research findings",
     "purpose": "Used by the JotForm ORI-lookup widget and the jurisdiction-validator skill to prevent submission of known-dead or unverified ORIs that cause $76-$228 misroute / cancellation losses",
+    "last_correction": "2026-08-17: removed a duplicate Woodlynne block that was mistakenly keyed under NJ0042100 — that ORI belongs to Lawnside PD, which is LIVE (verified via FBI CDE snapshot, weshootusa.com/nj-ori-numbers, lawnside.net firearms page). Woodlynne's real historical ORI NJ0043700 was already correctly blocked. Guarded by tools/cloudflare-worker/tests/ori_preflight.test.mjs.",
     "policy_for_widget": {
       "hard_block": "Refuse submission. Show replacement ORI prominently.",
       "warn_unverified": "Allow with explicit confirmation modal. User must type 'CONFIRMED' or click an explicit acknowledgment that they've verified this ORI directly with the PD records bureau."
@@ -31,14 +32,6 @@
       "reason": "Helmetta dissolved its PD effective 2022-07-01 and contracts policing from Jamesburg via shared services agreement (currently runs through 2028).",
       "effective": "2022-07-01",
       "source": "https://www.tapinto.net/towns/milltown-slash-spotswood/sections/police-and-fire/articles/helmetta-to-begin-shared-police-services-with-jamesburg-at-midnight"
-    },
-    "NJ0042100": {
-      "was": "Woodlynne Borough PD (Camden)",
-      "use_instead": "VERIFY_WITH_CCPD",
-      "use_instead_name": "Camden County Police Department",
-      "reason": "Woodlynne dissolved its PD effective 2024-10-01 and joined Camden County PD. Verify the exact routing ORI directly with CCPD Firearms Unit before filing.",
-      "effective": "2024-10-01",
-      "source": "https://whyy.org/articles/camden-police-woodlynne-consolidation/"
     },
     "NJ0010500": {
       "was": "Buena Vista Township PD (Atlantic)",
@@ -74,56 +67,285 @@
       "use_instead_name": "NJ State Police (Bordentown / lower Burlington barracks)",
       "reason": "State Police patrolled. Per MFD XLSX special-cases sheet.",
       "effective": "long-standing"
+    },
+    "NJ0043700": {
+      "was": "Woodlynne Borough PD (Camden) — dissolved",
+      "use_instead": "NJ0044500",
+      "use_instead_name": "Camden County Police Department",
+      "reason": "Woodlynne Borough PD dissolved 2024-10-01; policing is Camden County PD. Tamer-verified 2026-07-17.",
+      "effective": "2024-10-01",
+      "source": "https://whyy.org/articles/camden-police-woodlynne-consolidation/"
     }
   },
   "warn_unverified": {
     "_description": "These ORIs appear in MFD's XLSX with municipal-format codes (NJ0xxxxxxx) but the FBI Crime Data Explorer does NOT list them, suggesting the local PD is no longer active and the actual routing is via NJ State Police barracks. ALL of these need direct verification with the PD records bureau (or NJSP barracks) before any application is filed using these ORIs. Until verified, the widget should require explicit user confirmation before allowing them in submission.",
     "_action_required": "For each of these towns, MFD should call the local PD or the patrolling NJSP barracks, confirm the current correct ORI, and either (a) update the entry with the correct NJNSP-format ORI and remove from this warn list, or (b) confirm the muni-format ORI is still valid and remove from this warn list with a verified-date note.",
     "oris_pending_verification": [
-      {"ori": "NJ0050400", "muni": "Dennis Township", "county": "Cape May", "likely_route": "NJNSP3500"},
-      {"ori": "NJ0051100", "muni": "Upper Township", "county": "Cape May", "likely_route": "NJNSP3500"},
-      {"ori": "NJ0051600", "muni": "Woodbine Borough", "county": "Cape May", "likely_route": "NJNSP3500"},
-      {"ori": "NJ0060200", "muni": "Commercial Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060300", "muni": "Deerfield Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060400", "muni": "Downe Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060500", "muni": "Fairfield Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060600", "muni": "Greenwich Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060700", "muni": "Hopewell Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800", "notes": "This is the postal-vs-legal-municipality example town — Bridgeton ZIPs often route here legally. Critical to verify."},
-      {"ori": "NJ0060800", "muni": "Lawrence Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0060900", "muni": "Maurice River Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0061100", "muni": "Shiloh Borough", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0061200", "muni": "Stow Creek Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0061300", "muni": "Upper Deerfield Township", "county": "Cumberland", "likely_route": "NJNSP2200 or NJNSP2800"},
-      {"ori": "NJ0100100", "muni": "Alexandria Township", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0100200", "muni": "Bethlehem Township", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0100300", "muni": "Bloomsbury Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0100800", "muni": "East Amwell Township", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0101200", "muni": "Glen Gardner Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0101300", "muni": "Hampton Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0101600", "muni": "Kingwood Township", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0101800", "muni": "Lebanon Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0102000", "muni": "Milford Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0102300", "muni": "Stockton Borough", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0102500", "muni": "Union Township", "county": "Hunterdon", "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"},
-      {"ori": "NJ0170100", "muni": "Alloway Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0170600", "muni": "Mannington Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0170700", "muni": "Oldmans Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0170900", "muni": "Pennsville Township", "county": "Salem", "likely_route": "VERIFY (Pennsville may have own PD; FBI doesn't list)"},
-      {"ori": "NJ0171000", "muni": "Pilesgrove Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0171100", "muni": "Pittsgrove Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0171400", "muni": "Upper Pittsgrove Township", "county": "Salem", "likely_route": "NJNSP2200"},
-      {"ori": "NJ0190100", "muni": "Andover Borough", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0190300", "muni": "Branchville", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0190500", "muni": "Frankford Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0190700", "muni": "Fredon Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0190800", "muni": "Green Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0191000", "muni": "Hampton Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0191300", "muni": "Lafayette Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0191400", "muni": "Montague Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0191700", "muni": "Sandyston Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0192000", "muni": "Stillwater Township", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0192100", "muni": "Sussex Borough", "county": "Sussex", "likely_route": "NJNSP5200"},
-      {"ori": "NJ0192300", "muni": "Walpack Township", "county": "Sussex", "likely_route": "NJNSP5200"}
+      {
+        "ori": "NJ0050400",
+        "muni": "Dennis Township",
+        "county": "Cape May",
+        "likely_route": "NJNSP3500"
+      },
+      {
+        "ori": "NJ0051100",
+        "muni": "Upper Township",
+        "county": "Cape May",
+        "likely_route": "NJNSP3500"
+      },
+      {
+        "ori": "NJ0051600",
+        "muni": "Woodbine Borough",
+        "county": "Cape May",
+        "likely_route": "NJNSP3500"
+      },
+      {
+        "ori": "NJ0060200",
+        "muni": "Commercial Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060300",
+        "muni": "Deerfield Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060400",
+        "muni": "Downe Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060500",
+        "muni": "Fairfield Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060600",
+        "muni": "Greenwich Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060700",
+        "muni": "Hopewell Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800",
+        "notes": "This is the postal-vs-legal-municipality example town — Bridgeton ZIPs often route here legally. Critical to verify."
+      },
+      {
+        "ori": "NJ0060800",
+        "muni": "Lawrence Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0060900",
+        "muni": "Maurice River Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0061100",
+        "muni": "Shiloh Borough",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0061200",
+        "muni": "Stow Creek Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0061300",
+        "muni": "Upper Deerfield Township",
+        "county": "Cumberland",
+        "likely_route": "NJNSP2200 or NJNSP2800"
+      },
+      {
+        "ori": "NJ0100100",
+        "muni": "Alexandria Township",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0100200",
+        "muni": "Bethlehem Township",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0100300",
+        "muni": "Bloomsbury Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0100800",
+        "muni": "East Amwell Township",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0101200",
+        "muni": "Glen Gardner Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0101300",
+        "muni": "Hampton Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0101600",
+        "muni": "Kingwood Township",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0101800",
+        "muni": "Lebanon Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0102000",
+        "muni": "Milford Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0102300",
+        "muni": "Stockton Borough",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0102500",
+        "muni": "Union Township",
+        "county": "Hunterdon",
+        "likely_route": "NJNSP4200 / NJNSP5300 / NJNSP8800"
+      },
+      {
+        "ori": "NJ0170100",
+        "muni": "Alloway Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0170600",
+        "muni": "Mannington Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0170700",
+        "muni": "Oldmans Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0170900",
+        "muni": "Pennsville Township",
+        "county": "Salem",
+        "likely_route": "VERIFY (Pennsville may have own PD; FBI doesn't list)"
+      },
+      {
+        "ori": "NJ0171000",
+        "muni": "Pilesgrove Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0171100",
+        "muni": "Pittsgrove Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0171400",
+        "muni": "Upper Pittsgrove Township",
+        "county": "Salem",
+        "likely_route": "NJNSP2200"
+      },
+      {
+        "ori": "NJ0190100",
+        "muni": "Andover Borough",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0190300",
+        "muni": "Branchville",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0190500",
+        "muni": "Frankford Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0190700",
+        "muni": "Fredon Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0190800",
+        "muni": "Green Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0191000",
+        "muni": "Hampton Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0191300",
+        "muni": "Lafayette Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0191400",
+        "muni": "Montague Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0191700",
+        "muni": "Sandyston Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0192000",
+        "muni": "Stillwater Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0192100",
+        "muni": "Sussex Borough",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      },
+      {
+        "ori": "NJ0192300",
+        "muni": "Walpack Township",
+        "county": "Sussex",
+        "likely_route": "NJNSP5200"
+      }
     ]
   },
   "uncertain_flag_for_review": {
